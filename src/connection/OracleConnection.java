@@ -12,6 +12,7 @@ public class OracleConnection {
 	public OracleConnection() throws BankAccountException {
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
+			open();
 		}
 		catch (ClassNotFoundException e) {
 			throw new BankAccountException("Couldnt find database driver!");
